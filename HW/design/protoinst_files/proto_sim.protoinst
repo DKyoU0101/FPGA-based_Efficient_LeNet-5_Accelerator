@@ -1,0 +1,75 @@
+{
+	"version": "1.0",
+	"modules": {
+		"tb_dma_LeNet5": {
+			"proto_instances": {
+				"/inst_control_dma_ip_vip/inst/M_AXI": {
+					"interface": "xilinx.com:interface:aximm:1.0",
+					"ports": {
+						"ACLK": { "actual": "aclk"},
+						"ARESETN": { "actual": "aresetn"},
+						"ARADDR": { "actual": "m_axi_araddr"},
+						"ARREADY": { "actual": "m_axi_arready"},
+						"ARVALID": { "actual": "m_axi_arvalid"},
+						"AWADDR": { "actual": "m_axi_awaddr"},
+						"AWREADY": { "actual": "m_axi_awready"},
+						"AWVALID": { "actual": "m_axi_awvalid"},
+						"BREADY": { "actual": "m_axi_bready"},
+						"BRESP": { "actual": "m_axi_bresp"},
+						"BVALID": { "actual": "m_axi_bvalid"},
+						"RDATA": { "actual": "m_axi_rdata"},
+						"RREADY": { "actual": "m_axi_rready"},
+						"RRESP": { "actual": "m_axi_rresp"},
+						"RVALID": { "actual": "m_axi_rvalid"},
+						"WDATA": { "actual": "m_axi_wdata"},
+						"WREADY": { "actual": "m_axi_wready"},
+						"WSTRB": { "actual": "m_axi_wstrb"},
+						"WVALID": { "actual": "m_axi_wvalid"}
+					}
+				},
+				"/inst_slv_m00_axi_vip/inst/S_AXI": {
+					"interface": "xilinx.com:interface:aximm:1.0",
+					"ports": {
+						"ACLK": { "actual": "aclk"},
+						"ARADDR": { "actual": "s_axi_araddr"},
+						"ARBURST": { "actual": "s_axi_arburst"},
+						"ARCACHE": { "actual": "s_axi_arcache"},
+						"ARESETN": { "actual": "aresetn"},
+						"ARLEN": { "actual": "s_axi_arlen"},
+						"ARLOCK": { "actual": "s_axi_arlock"},
+						"ARPROT": { "actual": "s_axi_arprot"},
+						"ARQOS": { "actual": "s_axi_arqos"},
+						"ARREADY": { "actual": "s_axi_arready"},
+						"ARREGION": { "actual": "s_axi_arregion"},
+						"ARSIZE": { "actual": "s_axi_arsize"},
+						"ARVALID": { "actual": "s_axi_arvalid"},
+						"AWADDR": { "actual": "s_axi_awaddr"},
+						"AWBURST": { "actual": "s_axi_awburst"},
+						"AWCACHE": { "actual": "s_axi_awcache"},
+						"AWLEN": { "actual": "s_axi_awlen"},
+						"AWLOCK": { "actual": "s_axi_awlock"},
+						"AWPROT": { "actual": "s_axi_awprot"},
+						"AWQOS": { "actual": "s_axi_awqos"},
+						"AWREADY": { "actual": "s_axi_awready"},
+						"AWREGION": { "actual": "s_axi_awregion"},
+						"AWSIZE": { "actual": "s_axi_awsize"},
+						"AWVALID": { "actual": "s_axi_awvalid"},
+						"BREADY": { "actual": "s_axi_bready"},
+						"BRESP": { "actual": "s_axi_bresp"},
+						"BVALID": { "actual": "s_axi_bvalid"},
+						"RDATA": { "actual": "s_axi_rdata"},
+						"RLAST": { "actual": "s_axi_rlast"},
+						"RREADY": { "actual": "s_axi_rready"},
+						"RRESP": { "actual": "s_axi_rresp"},
+						"RVALID": { "actual": "s_axi_rvalid"},
+						"WDATA": { "actual": "s_axi_wdata"},
+						"WLAST": { "actual": "s_axi_wlast"},
+						"WREADY": { "actual": "s_axi_wready"},
+						"WSTRB": { "actual": "s_axi_wstrb"},
+						"WVALID": { "actual": "s_axi_wvalid"}
+					}
+				}
+			}
+		}
+	}
+}
