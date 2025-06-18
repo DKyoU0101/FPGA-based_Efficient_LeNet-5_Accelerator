@@ -45,7 +45,7 @@ The 32-bit fixed-point weight parameters (weight, bias) trained on PyTorch are q
 | $S^{-1}_{\text{out}}$ (Output feature map) | 16    | 4     | 2     | 2   | 2   | 
 | $M^{-1}$               | 512 | 512 | 256 |  256  | 256 |
 
-To achieve higher inference performance, the scale factors were tuned individually for each layer. Each parameter's scale value was chosen as a power of 2, enabling the substitution of multiplication with bit shifts in the convolution operations during the scale synchronization process. The scale adjustment factor $M$ required for synchronizing scales across layers is given by $ M = \frac{S_{\text{in}} \times S_{\text{w}}}{S_{\text{out}}} $.
+To achieve higher inference performance, the scale factors were tuned individually for each layer. Each parameter's scale value was chosen as a power of 2, enabling the substitution of multiplication with bit shifts in the convolution operations during the scale synchronization process. The scale adjustment factor $M$ required for synchronizing scales across layers is given by $M = \frac{S_{\text{in}} \times S_{\text{w}}}{S_{\text{out}}}$.
 
 ### Tiled Convolution 
 
