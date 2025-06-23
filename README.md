@@ -1,10 +1,17 @@
 # FPGA-based Efficient LeNet-5 Accelerator
 <img src="./Image/Overall_Structure.png"/>
 
-This project addresses an FPGA-based LeNet-5 accelerator designed using `Verilog-2001`. The repository contains the full source code for the LeNet-5 IP, which is assumed to operate on an FPGA, and the interconnect necessary for functioning as a hardware accelerator. It also includes software code for control and operational verification. The goal of this project is to establish an interconnect and system that effectively utilize the hardware accelerator and to lay the groundwork for future hardware designs of modern DNN models.
+This project addresses an FPGA-based LeNet-5 accelerator using _Verilog-2001_. The repository contains the full source code for the LeNet-5 IP, which is assumed to operate on an FPGA, and the interconnect for functioning as a hardware accelerator. It also includes software code for control and operational verification. In this project, The LeNet-5 IP is synthesized with __6,453 LUTs__, __9,455 FFs__ and __122 DSPs__ on the TE0729 (ZC7Z020) FPGA board, operates with an average latency of __179.7 us__ per image(5,564.8 FPS), and achieved __99.12%__ accuracy on 10,000 MNIST test images.
 
 ## Overview
-The LeNet-5 model introduced in this project is designed to incorporate well-known optimization techniques for efficiently implementing CNN models in hardware. The internal CNN operations are specifically designed for Tiled Convolution, and the Output Stationary (OS) dataflow method is employed to minimize the movement of partial sum data in convolution operations. The designed LeNet-5 IP is controlled through a Master/Slave structure using AXI-4 and is connected to a DMA module for direct access to DDR memory. In this project, the TE0729 FPGA board used for hardware operation verification controls the ALU area (PL), which includes the LeNet-5 IP, from the internal ZYNQ processor (PS) via the AXI-4 Standard.
+The goal of this project is to establish an interconnect and system for the effective utilization of a hardware accelerator, and to lay the groundwork for the efficient design of modern deep neural network (DNN) models in the future. For this reason, the LeNet-5 model, which has a simple structure and has been extensively studied, was selected as the accelerator model for this project. The designed LeNet-5 IP is controlled using an AXI-4 Master/Slave protocol and is connected to a DMA module to directly access DDR memory. In this project, the TE0729 FPGA board, used for hardware operation verification, controls the programmable logic (PL) area through the AXI-4 Standard from the internal ZYNQ Processing System (PS).
+
+## LeNet-5 IP 동작
+<여기에 LeNet-5 IP 동작 블럭 다이어그램 추가>
+
+
+## Project Features
+The LeNet-5 IP introduced in this project is meticulously designed with optimized pipelining and data flow to perform efficient Convolution operations in hardware, tailored to the internal computations of LeNet-5. The CNN operations are designed to be specialized for Tiled Convolution and utilize an Output Stationary (OS) dataflow approach to minimize the movement of partial sum data in convolution operations. The weight parameters are quantized using a unique scale factor for each layer, aiming to achieve optimal inference performance with limited resources. As a result, the implemented LeNet-5 IP is synthesized with low resource utilization while demonstrating high throughput, making it highly ___efficient___ compared to existing LeNet-5 accelerators designed with High-Level Synthesis (HLS).
 
 ## Model description
 <img src="./Image/lenet5_architecture.png"/>
@@ -51,10 +58,10 @@ To achieve higher inference performance, the scale factors were tuned individual
 
 To facilitate smaller unit operations and conserve hardware memory for the four dimensions ($Wout, Hout, C, N$) used in convolution operations, the concept of Tiled Convolution was introduced. In this project, for any dimension $A$, the tiled dimension is defined as $A = A_B(\text{Tile Num}) \times A_T(\text{Inner Tile Dimension})$.
 
-| Convolution  | Used Tiled Demention | Output(Accumulate) | 
-|------------|-------|---------|
-| Conv Layer Core | $F_{in}[C_T \times W_{in}], W[N_T \times C_T \times Kw], B[N_T]$  | $F_{out}[N_T \times W_{in T} ]$  | 
-| FC Layer Core   | $ F_{in}[C_T], W[N_T \times C_T], B[N_T]$ | $F_{out}[N_T]$ | 
+| Convolution  | Used Tiled Demention | PE(Processing Element) Num | Output(Accumulate) | 
+|------------|-------|---------|-------|
+| Conv Layer Core | $F_{in}[C_T \times W_{in}], W[N_T \times C_T \times Kw], B[N_T]$  | $C_T \times W_{out T}$ | $F_{out}[N_T \times W_{in T} ]$  | 
+| FC Layer Core   | $ F_{in}[C_T], W[N_T \times C_T], B[N_T]$ | $C_T$ | $F_{out}[N_T]$ | 
 
 In `cnn_conv_core.v` and `cnn_fc_core.v`, the Tiled Convolution operations as described in the table above are performed. Operations related to the $Kh$ and $N_T$ dimensions are handled in the higher-level modules `cnn_conv_layer.v` and `cnn_fc_layer.v`, respectively.
 
@@ -72,7 +79,7 @@ The table shows the tiled dimensions set experimentally for optimal performance,
 #### 1. On-chip Memory(BRAM) Dataflow Optimization
 In this project, the convolution operations computed in tile units within `cnn_conv_core.v` and `cnn_fc_core.v` use input feature map, weight, and bias data stored in BRAM.
 
-|              | Code | Processing Element(PE)   |  Convolution Hierarchy   | 
+|              | Code | Once Read Parameter from BRAM   |  Convolution Hierarchy   | 
 |-------------------|---------|---------|---------|
 | Conv Layer Core | `cnn_conv_core.v` | $Kw \times W_{out T} \times C_T \times N_T$  | $H_{out T} \rightarrow Kh \rightarrow PE$ | 
 | FC Layer Core  | `cnn_fc_core.v` | $N_T$ | $C_T \rightarrow PE$    | 
@@ -91,12 +98,12 @@ The LeNet-5 model is an early CNN model with a very small number of total weight
 ####  Simulation Result
 |   | Test Images  | Max latency | Max delay     |  Accuracy   | Simulation Runtime |
 |------------|---------|-------|---------|---------|-----------------|
-| LeNet-5  | 100(No.1~100) | 17,964 cycle | 71,914 cycle  | 100 % | 2.5 Hours
+| LeNet-5  | 100(No.1~100) | 17,964 cycle | 71,914 cycle  | 100 % | 1.5 Hours
 
 ### HW Verification using Xilinx ILA
 <img src="./Image/ILA_AR_Channel.png"/> 
 
-To verify the actual hardware operation, the Xilinx ILA(Integrated Logic Analyzer) module was connected to the AXI-4 channels of the LeNet-5 IP to validate the behavior of the Master and Slave. The ILA run trigger was set to the Ready/Valid handshake of the AXI-4 AR, AW channel.
+To verify the actual hardware operation, the Xilinx ILA(Integrated Logic Analyzer) module was connected to the AXI-4 channels of the LeNet-5 IP to validate the behavior of the Master and Slave. The ILA run trigger was set to the Ready/Valid handshake of the AXI-4 AR, AW channel. 
 
 ## Performance
 
@@ -117,6 +124,7 @@ To verify the actual hardware operation, the Xilinx ILA(Integrated Logic Analyze
 |---------|-----|-------|---------|---------|---------|--------|
 | LeNet-5 | TE0729(ZC7Z020)  | 100 MHz  | 1.797 sec |  10,000 | 99.12 %  | 5,564.8 |    | 
 
+ <여기에 이미지 수당 FPS 그래프 추가>
 
  
 ## How To Use
@@ -132,12 +140,12 @@ To verify the actual hardware operation, the Xilinx ILA(Integrated Logic Analyze
     ./load_and_test.py
 ```
 
-### Run XSIM Simulator
 * Run `LeNet5_core_ip.cpp` to generate Golden Reference :
 ```
     ./run.py -refc
 ```
 
+### Run XSIM Simulator
 * Run XSIM Simulation :
 ```
     ./run.py -nwf   ## Simulation without waveform
