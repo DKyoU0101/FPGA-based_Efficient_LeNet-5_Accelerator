@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="dma_LeNet5_origin_app" location="C:/FPGA_prj/CNN_FPGA/Xilinx/dma_LeNet5_vitis/dma_LeNet5_origin_app" platform="C:/FPGA_prj/CNN_FPGA/Xilinx/dma_LeNet5_vitis/design_origin_wrapper/export/design_origin_wrapper/design_origin_wrapper.xpfm" platformUID="xilinx:te0729_20_2i::0.0(custom)" systemProject="dma_LeNet5_origin_app_system" sysConfig="design_origin_wrapper" runtime="cpp" cpu="standalone_ps7_cortexa9_0" cpuInstance="ps7_cortexa9_0" os="standalone" language="CPP" mssSignature="655ce642dfc21b90fcde63b8fa3bb98d">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1725558501" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.504853244" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

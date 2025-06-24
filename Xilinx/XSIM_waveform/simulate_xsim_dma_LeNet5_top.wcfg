@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="simulate_xsim_tb_dma_LeNet5.wdb" id="1">
+         <top_modules>
+            <top_module name="axi_vip_pkg" />
+            <top_module name="std" />
+            <top_module name="tb_dma_LeNet5" />
+            <top_module name="vpkg" />
+            <top_module name="xil_common_vip_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="1,948.386001 us"></ZoomEndTime>
+      <Cursor1Time time="1,948.386000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="303"></NameColumnWidth>
+      <ValueColumnWidth column_width="131"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="111" />
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/ap_clk">
+      <obj_property name="ElementShortName">ap_clk</obj_property>
+      <obj_property name="ObjectShortName">ap_clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/ap_rst_n">
+      <obj_property name="ElementShortName">ap_rst_n</obj_property>
+      <obj_property name="ObjectShortName">ap_rst_n</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_awvalid">
+      <obj_property name="ElementShortName">m00_axi_awvalid</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_awvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_awready">
+      <obj_property name="ElementShortName">m00_axi_awready</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_awready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_awaddr">
+      <obj_property name="ElementShortName">m00_axi_awaddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_awaddr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_awid">
+      <obj_property name="ElementShortName">m00_axi_awid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_awid[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_awlen">
+      <obj_property name="ElementShortName">m00_axi_awlen[7:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_awlen[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_awsize">
+      <obj_property name="ElementShortName">m00_axi_awsize[2:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_awsize[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_awburst">
+      <obj_property name="ElementShortName">m00_axi_awburst[1:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_awburst[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_awlock">
+      <obj_property name="ElementShortName">m00_axi_awlock[1:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_awlock[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_awcache">
+      <obj_property name="ElementShortName">m00_axi_awcache[3:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_awcache[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_awprot">
+      <obj_property name="ElementShortName">m00_axi_awprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_awprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_awqos">
+      <obj_property name="ElementShortName">m00_axi_awqos[3:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_awqos[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_awregion">
+      <obj_property name="ElementShortName">m00_axi_awregion[3:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_awregion[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_awuser">
+      <obj_property name="ElementShortName">m00_axi_awuser[0:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_awuser[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_wvalid">
+      <obj_property name="ElementShortName">m00_axi_wvalid</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_wvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_wready">
+      <obj_property name="ElementShortName">m00_axi_wready</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_wready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_wdata">
+      <obj_property name="ElementShortName">m00_axi_wdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_wdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_wstrb">
+      <obj_property name="ElementShortName">m00_axi_wstrb[7:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_wstrb[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_wlast">
+      <obj_property name="ElementShortName">m00_axi_wlast</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_wlast</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_wid">
+      <obj_property name="ElementShortName">m00_axi_wid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_wid[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_wuser">
+      <obj_property name="ElementShortName">m00_axi_wuser[0:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_wuser[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_arvalid">
+      <obj_property name="ElementShortName">m00_axi_arvalid</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_arvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_arready">
+      <obj_property name="ElementShortName">m00_axi_arready</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_arready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_araddr">
+      <obj_property name="ElementShortName">m00_axi_araddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_araddr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_arid">
+      <obj_property name="ElementShortName">m00_axi_arid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_arid[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_arlen">
+      <obj_property name="ElementShortName">m00_axi_arlen[7:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_arlen[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_arsize">
+      <obj_property name="ElementShortName">m00_axi_arsize[2:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_arsize[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_arburst">
+      <obj_property name="ElementShortName">m00_axi_arburst[1:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_arburst[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_arlock">
+      <obj_property name="ElementShortName">m00_axi_arlock[1:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_arlock[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_arcache">
+      <obj_property name="ElementShortName">m00_axi_arcache[3:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_arcache[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_arprot">
+      <obj_property name="ElementShortName">m00_axi_arprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_arprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_arqos">
+      <obj_property name="ElementShortName">m00_axi_arqos[3:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_arqos[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_arregion">
+      <obj_property name="ElementShortName">m00_axi_arregion[3:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_arregion[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_aruser">
+      <obj_property name="ElementShortName">m00_axi_aruser[0:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_aruser[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_rvalid">
+      <obj_property name="ElementShortName">m00_axi_rvalid</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_rvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_rready">
+      <obj_property name="ElementShortName">m00_axi_rready</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_rready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_rdata">
+      <obj_property name="ElementShortName">m00_axi_rdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_rdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_rlast">
+      <obj_property name="ElementShortName">m00_axi_rlast</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_rlast</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_rid">
+      <obj_property name="ElementShortName">m00_axi_rid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_rid[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_ruser">
+      <obj_property name="ElementShortName">m00_axi_ruser[0:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_ruser[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_rresp">
+      <obj_property name="ElementShortName">m00_axi_rresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_rresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_bvalid">
+      <obj_property name="ElementShortName">m00_axi_bvalid</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_bvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_bready">
+      <obj_property name="ElementShortName">m00_axi_bready</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_bready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_bresp">
+      <obj_property name="ElementShortName">m00_axi_bresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_bresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_bid">
+      <obj_property name="ElementShortName">m00_axi_bid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_bid[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/m00_axi_buser">
+      <obj_property name="ElementShortName">m00_axi_buser[0:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axi_buser[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/s_axi_control_awvalid">
+      <obj_property name="ElementShortName">s_axi_control_awvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axi_control_awvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/s_axi_control_awready">
+      <obj_property name="ElementShortName">s_axi_control_awready</obj_property>
+      <obj_property name="ObjectShortName">s_axi_control_awready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/s_axi_control_awaddr">
+      <obj_property name="ElementShortName">s_axi_control_awaddr[11:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_control_awaddr[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/s_axi_control_wvalid">
+      <obj_property name="ElementShortName">s_axi_control_wvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axi_control_wvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/s_axi_control_wready">
+      <obj_property name="ElementShortName">s_axi_control_wready</obj_property>
+      <obj_property name="ObjectShortName">s_axi_control_wready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/s_axi_control_wdata">
+      <obj_property name="ElementShortName">s_axi_control_wdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_control_wdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/s_axi_control_wstrb">
+      <obj_property name="ElementShortName">s_axi_control_wstrb[3:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_control_wstrb[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/s_axi_control_arvalid">
+      <obj_property name="ElementShortName">s_axi_control_arvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axi_control_arvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/s_axi_control_arready">
+      <obj_property name="ElementShortName">s_axi_control_arready</obj_property>
+      <obj_property name="ObjectShortName">s_axi_control_arready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/s_axi_control_araddr">
+      <obj_property name="ElementShortName">s_axi_control_araddr[11:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_control_araddr[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/s_axi_control_rvalid">
+      <obj_property name="ElementShortName">s_axi_control_rvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axi_control_rvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/s_axi_control_rready">
+      <obj_property name="ElementShortName">s_axi_control_rready</obj_property>
+      <obj_property name="ObjectShortName">s_axi_control_rready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/s_axi_control_rdata">
+      <obj_property name="ElementShortName">s_axi_control_rdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_control_rdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/s_axi_control_rresp">
+      <obj_property name="ElementShortName">s_axi_control_rresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_control_rresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/s_axi_control_bvalid">
+      <obj_property name="ElementShortName">s_axi_control_bvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axi_control_bvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/s_axi_control_bready">
+      <obj_property name="ElementShortName">s_axi_control_bready</obj_property>
+      <obj_property name="ObjectShortName">s_axi_control_bready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/s_axi_control_bresp">
+      <obj_property name="ElementShortName">s_axi_control_bresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_control_bresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/interrupt">
+      <obj_property name="ElementShortName">interrupt</obj_property>
+      <obj_property name="ObjectShortName">interrupt</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/areset">
+      <obj_property name="ElementShortName">areset</obj_property>
+      <obj_property name="ObjectShortName">areset</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/ap_start_param">
+      <obj_property name="ElementShortName">ap_start_param</obj_property>
+      <obj_property name="ObjectShortName">ap_start_param</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/ap_start_infmap">
+      <obj_property name="ElementShortName">ap_start_infmap</obj_property>
+      <obj_property name="ObjectShortName">ap_start_infmap</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/ap_idle">
+      <obj_property name="ElementShortName">ap_idle</obj_property>
+      <obj_property name="ObjectShortName">ap_idle</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/ap_done">
+      <obj_property name="ElementShortName">ap_done</obj_property>
+      <obj_property name="ObjectShortName">ap_done</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/ap_ready">
+      <obj_property name="ElementShortName">ap_ready</obj_property>
+      <obj_property name="ObjectShortName">ap_ready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/ap_wdma_done">
+      <obj_property name="ElementShortName">ap_wdma_done</obj_property>
+      <obj_property name="ObjectShortName">ap_wdma_done</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/rdma_param_ptr">
+      <obj_property name="ElementShortName">rdma_param_ptr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rdma_param_ptr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/rdma_infmap_ptr">
+      <obj_property name="ElementShortName">rdma_infmap_ptr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rdma_infmap_ptr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/wdma_mem_ptr">
+      <obj_property name="ElementShortName">wdma_mem_ptr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wdma_mem_ptr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/axi00_ptr0">
+      <obj_property name="ElementShortName">axi00_ptr0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">axi00_ptr0[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/out_r_din">
+      <obj_property name="ElementShortName">out_r_din[63:0]</obj_property>
+      <obj_property name="ObjectShortName">out_r_din[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/out_r_full_n">
+      <obj_property name="ElementShortName">out_r_full_n</obj_property>
+      <obj_property name="ObjectShortName">out_r_full_n</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/out_r_write">
+      <obj_property name="ElementShortName">out_r_write</obj_property>
+      <obj_property name="ObjectShortName">out_r_write</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/in_r_dout">
+      <obj_property name="ElementShortName">in_r_dout[63:0]</obj_property>
+      <obj_property name="ObjectShortName">in_r_dout[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/in_r_empty_n">
+      <obj_property name="ElementShortName">in_r_empty_n</obj_property>
+      <obj_property name="ObjectShortName">in_r_empty_n</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/in_r_read">
+      <obj_property name="ElementShortName">in_r_read</obj_property>
+      <obj_property name="ObjectShortName">in_r_read</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/w_in_r_dout">
+      <obj_property name="ElementShortName">w_in_r_dout[63:0]</obj_property>
+      <obj_property name="ObjectShortName">w_in_r_dout[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/w_in_r_empty_n">
+      <obj_property name="ElementShortName">w_in_r_empty_n</obj_property>
+      <obj_property name="ObjectShortName">w_in_r_empty_n</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/w_in_r_read">
+      <obj_property name="ElementShortName">w_in_r_read</obj_property>
+      <obj_property name="ObjectShortName">w_in_r_read</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/out_r_rd_param">
+      <obj_property name="ElementShortName">out_r_rd_param</obj_property>
+      <obj_property name="ObjectShortName">out_r_rd_param</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/out_r_rd_infmap">
+      <obj_property name="ElementShortName">out_r_rd_infmap</obj_property>
+      <obj_property name="ObjectShortName">out_r_rd_infmap</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/C_S_AXI_CONTROL_ADDR_WIDTH">
+      <obj_property name="ElementShortName">C_S_AXI_CONTROL_ADDR_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C_S_AXI_CONTROL_ADDR_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/C_S_AXI_CONTROL_DATA_WIDTH">
+      <obj_property name="ElementShortName">C_S_AXI_CONTROL_DATA_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C_S_AXI_CONTROL_DATA_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/C_M00_AXI_ID_WIDTH">
+      <obj_property name="ElementShortName">C_M00_AXI_ID_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C_M00_AXI_ID_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/C_M00_AXI_AWUSER_WIDTH">
+      <obj_property name="ElementShortName">C_M00_AXI_AWUSER_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C_M00_AXI_AWUSER_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/C_M00_AXI_ARUSER_WIDTH">
+      <obj_property name="ElementShortName">C_M00_AXI_ARUSER_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C_M00_AXI_ARUSER_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/C_M00_AXI_WUSER_WIDTH">
+      <obj_property name="ElementShortName">C_M00_AXI_WUSER_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C_M00_AXI_WUSER_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/C_M00_AXI_RUSER_WIDTH">
+      <obj_property name="ElementShortName">C_M00_AXI_RUSER_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C_M00_AXI_RUSER_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/C_M00_AXI_BUSER_WIDTH">
+      <obj_property name="ElementShortName">C_M00_AXI_BUSER_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C_M00_AXI_BUSER_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/C_M00_AXI_USER_VALUE">
+      <obj_property name="ElementShortName">C_M00_AXI_USER_VALUE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C_M00_AXI_USER_VALUE[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/C_M00_AXI_PROT_VALUE">
+      <obj_property name="ElementShortName">C_M00_AXI_PROT_VALUE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C_M00_AXI_PROT_VALUE[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/C_M00_AXI_CACHE_VALUE">
+      <obj_property name="ElementShortName">C_M00_AXI_CACHE_VALUE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C_M00_AXI_CACHE_VALUE[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/C_M00_AXI_ADDR_WIDTH">
+      <obj_property name="ElementShortName">C_M00_AXI_ADDR_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C_M00_AXI_ADDR_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/C_M00_AXI_DATA_WIDTH">
+      <obj_property name="ElementShortName">C_M00_AXI_DATA_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C_M00_AXI_DATA_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/NUM_RD_INFMAP">
+      <obj_property name="ElementShortName">NUM_RD_INFMAP[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NUM_RD_INFMAP[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/NUM_RD_PARAM">
+      <obj_property name="ElementShortName">NUM_RD_PARAM[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NUM_RD_PARAM[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/MULT_DELAY">
+      <obj_property name="ElementShortName">MULT_DELAY[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MULT_DELAY[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/ACC_DELAY_C">
+      <obj_property name="ElementShortName">ACC_DELAY_C[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ACC_DELAY_C[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/ACC_DELAY_FC">
+      <obj_property name="ElementShortName">ACC_DELAY_FC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ACC_DELAY_FC[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/AB_DELAY">
+      <obj_property name="ElementShortName">AB_DELAY[31:0]</obj_property>
+      <obj_property name="ObjectShortName">AB_DELAY[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/I_F_BW">
+      <obj_property name="ElementShortName">I_F_BW[31:0]</obj_property>
+      <obj_property name="ObjectShortName">I_F_BW[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/W_BW">
+      <obj_property name="ElementShortName">W_BW[31:0]</obj_property>
+      <obj_property name="ObjectShortName">W_BW[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/B_BW">
+      <obj_property name="ElementShortName">B_BW[31:0]</obj_property>
+      <obj_property name="ObjectShortName">B_BW[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/DATA_IDX_BW">
+      <obj_property name="ElementShortName">DATA_IDX_BW[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_IDX_BW[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_dma_LeNet5/u_dma_LeNet5_top/C_ADDER_BIT_WIDTH">
+      <obj_property name="ElementShortName">C_ADDER_BIT_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C_ADDER_BIT_WIDTH[31:0]</obj_property>
+   </wvobject>
+</wave_config>

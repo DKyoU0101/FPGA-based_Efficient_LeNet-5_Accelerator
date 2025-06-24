@@ -1,20 +1,22 @@
 # FPGA-based Efficient LeNet-5 Accelerator
 <img src="./Image/Overall_Structure.png"/>
 
-This project addresses an FPGA-based LeNet-5 accelerator using _Verilog-2001_. The repository contains the full source code for the LeNet-5 IP, which is assumed to operate on an FPGA, and the interconnect for functioning as a hardware accelerator. It also includes software code for control and operational verification. In this project, The LeNet-5 IP is synthesized with __6,453 LUTs__, __9,455 FFs__ and __122 DSPs__ on the TE0729 (ZC7Z020) FPGA board, operates with an average latency of __179.7 us__ per image(5,564.8 FPS), and achieved __99.12%__ accuracy on 10,000 MNIST test images.
+This project addresses an FPGA-based LeNet-5 accelerator using _Verilog-2001_. The repository contains the full source code for the LeNet-5 IP, which is assumed to operate on an FPGA, and the interconnect for functioning as a hardware accelerator. It also includes software code for control and operational verification. In this project, The LeNet-5 IP is synthesized with __6,453 LUTs__, __9,455 FFs__ and __122 DSPs__ on the TE0729 (ZC7Z020) FPGA board, operates with an average latency of __179.7 us__ per image(__2.32 GOPs__), and achieved __99.12%__ accuracy on 10,000 MNIST test images.
 
 ## Overview
 The goal of this project is to establish an interconnect and system for the effective utilization of a hardware accelerator, and to lay the groundwork for the efficient design of modern deep neural network (DNN) models in the future. For this reason, the LeNet-5 model, which has a simple structure and has been extensively studied, was selected as the accelerator model for this project. The designed LeNet-5 IP is controlled using an AXI-4 Master/Slave protocol and is connected to a DMA module to directly access DDR memory. In this project, the TE0729 FPGA board, used for hardware operation verification, controls the programmable logic (PL) area through the AXI-4 Standard from the internal ZYNQ Processing System (PS).
 
-## LeNet-5 IP 동작
-<여기에 LeNet-5 IP 동작 블럭 다이어그램 추가>
-
 
 ## Project Features
-The LeNet-5 IP introduced in this project is meticulously designed with optimized pipelining and data flow to perform efficient Convolution operations in hardware, tailored to the internal computations of LeNet-5. The CNN operations are designed to be specialized for Tiled Convolution and utilize an Output Stationary (OS) dataflow approach to minimize the movement of partial sum data in convolution operations. The weight parameters are quantized using a unique scale factor for each layer, aiming to achieve optimal inference performance with limited resources. As a result, the implemented LeNet-5 IP is synthesized with low resource utilization while demonstrating high throughput, making it highly ___efficient___ compared to existing LeNet-5 accelerators designed with High-Level Synthesis (HLS).
+The LeNet-5 IP introduced in this project is meticulously designed with optimized pipelining and data flow to perform efficient Convolution operations in hardware, tailored to the internal computations of LeNet-5. The CNN operations are designed to be specialized for Tiled Convolution and utilize an Output Stationary (OS) dataflow approach to minimize the movement of partial sum data in convolution operations. The weight parameters are quantized using a unique scale factor for each layer, aiming to achieve optimal inference performance with limited resources. As a result, the implemented LeNet-5 IP is synthesized with low resource utilization while demonstrating high throughput, making it highly ___efficient___ compared to existing LeNet-5 accelerators simply designed with High-Level Synthesis (HLS).
+
+## LeNet-5 IP Architecture
+<img src="./Image/LeNet5_IP_Architecture.png"/>
+
+
 
 ## Model description
-<img src="./Image/lenet5_architecture.png"/>
+<img src="./Image/lenet5_parameter_size.png"/>
 
 Input Images : MNIST Test Dataset
 
@@ -108,7 +110,7 @@ To verify the actual hardware operation, the Xilinx ILA(Integrated Logic Analyze
 ## Performance
 
 ###  Resource Utilization
-<img src="./Image/utilization.png"/> 
+<img src="./Image/utilization.png"/>
 
 |  Resource | LUT   | FF   |  BRAM    | DSP     |
 |------------|-------|---------|---------|---------|
@@ -116,15 +118,19 @@ To verify the actual hardware operation, the Xilinx ILA(Integrated Logic Analyze
 | LeNet-5 with AXI-4 Interconnect | 7,770 | 11,338 | 37.5 | 122   | 
 
 ### FPGA Board Test
+
 |<img src="./Image/test_hw_runtime.png"/>|<img src="./Image/test_hw_accuracy.png"/> 
 |------------|-----------|
 
+<img src="./Image/GOPs_per_Images.png"/> 
 
-|         | FPGA | Clock Freq.   | HW Runtime | Test Images  | Accuracy   | FPS |    
-|---------|-----|-------|---------|---------|---------|--------|
-| LeNet-5 | TE0729(ZC7Z020)  | 100 MHz  | 1.797 sec |  10,000 | 99.12 %  | 5,564.8 |    | 
-
- <여기에 이미지 수당 FPS 그래프 추가>
+|         | FPGA | Clock Freq.   | HW Runtime | Test Images  | Accuracy   | TPs | GOPs   
+|---------|-----|-------|---------|---------|---------|--------|-------|
+| LeNet-5 | TE0729(ZC7Z020)  | 100 MHz  | 1.797 sec |  10,000 | 99.12 %  | 5,564.8 | 2.32 | 
+- 1 MAC = Multiply + Accumulation
+- Total LeNet-5 MACs = 416,520
+- TPs = $(\text{Test Images}) \div (\text{HW Runtime} [s])$
+- OPs = $(\text{Test Images}) \times (\text{MACs}) \div (\text{HW Runtime} [s])$
 
  
 ## How To Use
@@ -137,36 +143,35 @@ To verify the actual hardware operation, the Xilinx ILA(Integrated Logic Analyze
 
 * Test Quantized LeNet-5 Model :
 ```
+    cd HW/sim
     ./load_and_test.py
 ```
 
-* Run `LeNet5_core_ip.cpp` to generate Golden Reference :
+### Open XSIM Waveform File
+* Open Testbench Signals Waveform :
 ```
-    ./run.py -refc
-```
-
-### Run XSIM Simulator
-* Run XSIM Simulation :
-```
-    ./run.py -nwf   ## Simulation without waveform
-    ./run.py -tbwf  ## Simulation with Tectbench signal waveform
-    ./run.py -twf   ## Simulation with Top Module signal waveform
-    ./run.py -cwf   ## Simulation with LeNet-5 Core IP signal waveform
-    ./run.py -swf
-    <Module Path>   ## Simulation with Submodule signal waveform
+    cd Xilinx/XSIM_waveform
+    xsim simulate_xsim_tb_dma_LeNet5(loop_5).wdb -gui
 ```
 
-* Comparison XSIM results with Golden reference :
+* Open LeNet-5 IP Signals Waveform :
 ```
-    ./run.py -diff
+    cd Xilinx/XSIM_waveform
+    xsim simulate_xsim_LeNet5_core_ip.wdb -gui
 ```
 
-### Input Mode (in Xilinx Vitis Serial Terminal)
+### Test HW
+* Launch Vitis IDE :
 ```
-    1 ## READ Quantized LeNet-5 Parameter 
-    2 ## HW RUN 
-    3 ## CHECK SW vs HW result
-    4 ## Check Memory State
+    $vitis  ## Workplace: Xilinx/dma_LeNet5_vitis
+```
+
+* Input Mode in Xilinx Vitis Serial Terminal:
+```
+    1   ## READ Quantized LeNet-5 Parameter 
+    2   ## HW RUN 
+    3   ## CHECK SW vs HW result
+    4   ## Check Memory State
 ```
 
 ## Tools
