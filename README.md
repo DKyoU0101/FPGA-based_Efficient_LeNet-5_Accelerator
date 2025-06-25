@@ -13,9 +13,9 @@ The LeNet-5 IP introduced in this project is meticulously designed with optimize
 ## LeNet-5 IP Architecture
 <img src="./Image/LeNet5_IP_Architecture.png"/>
 
-LeNet-5 module defined in `LeNet5.v` implements a five-stage pipelined architecture in which each layer operates in parallel. Once a pipeline stage completes, the image data—regardless of the type of the activated layer—can immediately be fed into the next stage of the pipeline.
+The __LeNet-5__ module defined in `LeNet5.v` has a five-stage pipeline structure where each internal layer operates in parallel. Once a pipeline operation is completed, the read image data can be used for the next pipeline regardless of the type of activated layer inside. 
 
-The LeNet-5 Core IP, defined in `LeNet5_core_ip.v`, is connected to the DMA module via an AXI-4 Stream in a master/slave configuration. Communication between the DMA and the LeNet-5 pipeline runs independently of the pipeline’s operation. Through its S_AXI interface, the Core IP writes input images or trained weight parameters into on-chip memory; the signal `s_axis_tuser` is used to distinguish between image data reads and weight-parameter writes.
+The __LeNet-5 Core IP__ defined in `LeNet5_core_ip.v` is connected to the DMA module via AXI-4 Stream in a Master/Slave structure, and communication with the DMA occurs independently of the LeNet-5 module's pipeline. The S_AXI of the LeNet-5 Core IP stores input image or trained weight parameter values in on-chip memory, and the distinction of the read dataset is determined by the `s_axis_tuser` value.
 
 ## Model description
 <img src="./Image/lenet5_parameter_size.png"/>
