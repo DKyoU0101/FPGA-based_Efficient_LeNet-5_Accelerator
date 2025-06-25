@@ -13,7 +13,9 @@ The LeNet-5 IP introduced in this project is meticulously designed with optimize
 ## LeNet-5 IP Architecture
 <img src="./Image/LeNet5_IP_Architecture.png"/>
 
+LeNet-5 module defined in `LeNet5.v` implements a five-stage pipelined architecture in which each layer operates in parallel. Once a pipeline stage completes, the image data—regardless of the type of the activated layer—can immediately be fed into the next stage of the pipeline.
 
+The LeNet-5 Core IP, defined in `LeNet5_core_ip.v`, is connected to the DMA module via an AXI-4 Stream in a master/slave configuration. Communication between the DMA and the LeNet-5 pipeline runs independently of the pipeline’s operation. Through its S_AXI interface, the Core IP writes input images or trained weight parameters into on-chip memory; the signal `s_axis_tuser` is used to distinguish between image data reads and weight-parameter writes.
 
 ## Model description
 <img src="./Image/lenet5_parameter_size.png"/>
@@ -163,7 +165,7 @@ To verify the actual hardware operation, the Xilinx ILA(Integrated Logic Analyze
 ### Test HW
 * Launch Vitis IDE :
 ```
-    $vitis  ## Workplace: Xilinx/dma_LeNet5_vitis
+    vitis  ## Workplace: Xilinx/dma_LeNet5_vitis
 ```
 
 * Input Mode in Xilinx Vitis Serial Terminal:
