@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<section name="Workbench">
-	<item key="sdx.custom.platform.repository.locations" value="C:\FPGA_prj\CNN_FPGA\Xilinx\dma_LeNet5_vitis\design_origin_wrapper\export\design_origin_wrapper;C:\FPGA_prj\CNN_FPGA\Xilinx\dma_LeNet5_vitis\design_ILA_wrapper\export\design_ILA_wrapper;C:\FPGA_prj\FPGA-based-Efficient-LeNet-5-Accelerator\Xilinx\dma_LeNet5_vitis\design_origin_wrapper\export\design_origin_wrapper"/>
-	<item key="sdx.custom.platform.repository.last.directory.dialog.location" value="C:\FPGA_prj\FPGA-based-Efficient-LeNet-5-Accelerator\Xilinx\dma_LeNet5_vitis\design_origin_wrapper\export\design_origin_wrapper"/>
-</section>
