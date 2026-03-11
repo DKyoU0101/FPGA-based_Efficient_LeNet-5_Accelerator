@@ -65,7 +65,7 @@ To facilitate smaller unit operations and conserve hardware memory for the four 
 | Convolution  | Used Tiled Demention | PE(Processing Element) Num | Output(Accumulate) | 
 |------------|-------|---------|-------|
 | Conv Layer Core | $F_{in}[C_T \times W_{in}], W[N_T \times C_T \times Kw], B[N_T]$  | $C_T \times W_{out T}$ | $F_{out}[N_T \times W_{in T} ]$  | 
-| FC Layer Core   | $ F_{in}[C_T], W[N_T \times C_T], B[N_T]$ | $C_T$ | $F_{out}[N_T]$ | 
+| FC Layer Core   | $F_{in}[C_T], W[N_T \times C_T], B[N_T]$ | $C_T$ | $F_{out}[N_T]$ | 
 
 In `cnn_conv_core.v` and `cnn_fc_core.v`, the Tiled Convolution operations as described in the table above are performed. Operations related to the $Kh$ and $N_T$ dimensions are handled in the higher-level modules `cnn_conv_layer.v` and `cnn_fc_layer.v`, respectively.
 
